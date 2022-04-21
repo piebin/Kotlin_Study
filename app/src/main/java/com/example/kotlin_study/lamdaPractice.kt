@@ -26,6 +26,20 @@ fun main(){
 
     println(extendString("momo", 7))
     println(calculateGrade(85))
+
+    val lamda = {number:Double ->
+        number==4.12
+    }
+
+    println(invokeLamda(lamda))
+    println(invokeLamda({it>3.22}))
+    println(invokeLamda { it>3.22 }) //위에꺼랑 동일 ->마지막 파라미터가 lamda식일때 자주 사용. it=유일한 파라미터를 가리킴
+
+
+
+
+
+
 }
 
 //확장함수
@@ -49,3 +63,30 @@ val calculateGrade : (Int)->String={
     }
 
 }
+
+//람다의 여러가지 표현법
+
+fun invokeLamda(lamda:(Double)->Boolean) : Boolean{//double형을 입력받고 boolean을 리턴하는 lamda를 입력받고 boolean을 리턴함.
+    return lamda(5.34)
+}
+
+
+//pojo class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
